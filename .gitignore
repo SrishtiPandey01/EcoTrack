@@ -1,0 +1,13 @@
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Local environment secrets
+.env
+.env.*
+!.env.example
