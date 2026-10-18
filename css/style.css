@@ -1,0 +1,220 @@
+/* 1. Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #198754;
+    --primary-dark: #146c43;
+    --background: #f4f8f5;
+    --white: #ffffff;
+    --text: #26352b;
+    --muted: #647067;
+    --border: #dce7df;
+}
+
+body{
+
+    font-family: Arial,sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* 2. Header */
+header{
+    background-color: var(--white);
+    padding: 24px 6%;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1{
+    color: var(--primary);
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+header p{
+    color: var(--muted);
+}
+
+/* 3. Navigation */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 18px;
+}
+
+nav a{
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+nav a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* 4. Main Layout */
+main {
+    width: min(1100px,92%);
+    margin: 32px auto;
+}
+
+section{
+    background-color: var(--white);
+    padding: 26px;
+    margin-bottom: 28px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14pxrgba(30, 70, 40, 0.04);
+}
+
+section h2{
+    margin-bottom: 22px;
+    font-size: 23px;
+}
+
+/* 5. Dashboard Cards */
+#dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#dashboard h2 {
+    grid-column: 1 /-1;
+    margin-bottom: 0;
+}
+
+#dashboard article {
+    padding: 20px;
+    background-color: #edf7ef;
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+}
+
+#dashboard article h3 {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+#dashboard article p {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+/* 6. Form */
+#wasteForm {
+    display: grid;
+    gap: 10px;
+}
+
+#wasteForm label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#wasteForm input,
+#wasteForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd8ce;
+    border-radius: 8px;
+    background-color: var(--white);
+    font: inherit;
+}
+
+#wasteForm input:focus,
+#wasteForm select:focus {
+    outline: 2px solid #8ac9a0;
+    border-color: var(--primary);
+}
+
+button{
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* 7. Waste History Table */
+#history {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse:collapse ;
+    background-color: var(--white);
+}
+
+th,td {
+    padding: 13px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th{
+    background-color: #edf7ef;
+    color: var(--primary-dark);
+}
+
+tbody tr:hover {
+    background-color: #f5faf6;
+}
+
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+}
+
+/* 9. Responsive Design */
+@media (max-width: 700px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    #dashboard h2 {
+        grid-column: auto;
+    }
+}
