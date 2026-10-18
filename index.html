@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoTrack | Smart Waste Management</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>EcoTrack</h1>
+      <p>Track Waste. Recycle More. Build a Greener Future.</p>
+
+      <nav aria-level="Main navigation">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#add-waste">Add Waste</a>
+        <a href="#history">Waste History</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboard">
+        <h2>My Waste Dashboard</h2>
+
+        <article>
+          <h3>Total Waste</h3>
+          <p id="totalwaste">0 kg</p>
+        </article>
+
+        <article>
+          <h3>Recycled Waste</h3>
+          <p id="recycledWaste">0 kg</p>
+        </article>
+
+        <article>
+          <h3>Recycling Rate</h3>
+          <p id="recyclingRate">0%</p>
+        </article>
+      </section>
+
+      <section id="add-waste">
+        <h2>Add Waste Record</h2>
+
+        <form id="wasteForm">
+          <label for="category">Waste Category:</label>
+          <select id="category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="Plastic">Plastic</option>
+            <option value="Paper">Paper</option>
+            <option value="Glass">Glass</option>
+            <option value="Organic">Organic</option>
+            <option value="Metal">Metal</option>
+          </select>
+          <br /><br />
+          <label for="weight">Weight (kg):</label>
+          <input
+            type="number"
+            id="weight"
+            name="weight"
+            min="0.01"
+            step="0.01"
+            required
+          />
+
+          <br /><br />
+
+          <label for="method">Disposal Method:</label>
+          <select id="method" name="method" required>
+            <option value="">Select Method</option>
+            <option value="Recycled">Recycled</option>
+            <option value="Landfill">Landfill</option>
+            <option value="Composted">Composted</option>
+          </select>
+
+          <br /><br />
+
+          <label for="wasteDate">Date:</label>
+          <input type="date" id="wasteDate" name="wasteDate" required />
+
+          <br /><br />
+
+          <button type="submit">Add Record</button>
+        </form>
+      </section>
+
+      <section id="history">
+        <h2>Waste History</h2>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Weight (kg)</th>
+              <th>Method</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+
+          <tbody id="wasteTableBody">
+            <tr>
+              <td colspan="4">No records available yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>EcoTrack - Track Waste, Build a Greener Future.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
