@@ -1,0 +1,185 @@
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f8f5;
+    font-family: Arial, sans-serif;
+    color: #26382d;
+}
+
+/* Navbar */
+.eco-navbar {
+    background-color: #176b45;
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.back-btn {
+    background-color: white;
+    color: #176b45;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background-color: #e5f4e9;
+    color: #125437;
+}
+
+/* Main Section */
+.history-section {
+    flex: 1;
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+
+.heading-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading-section h1 {
+    color: #176b45;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.heading-section p {
+    color: #65736a;
+}
+
+/* Summary Cards */
+.summary-card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e0e9e2;
+    border-left: 5px solid #27865b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.summary-card p {
+    color: #65736a;
+    margin-bottom: 8px;
+}
+
+.summary-card h3 {
+    color: #176b45;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Table Card */
+.table-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e0e9e2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.table-card h4 {
+    color: #176b45;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table thead th {
+    background-color: #176b45;
+    color: white;
+    white-space: nowrap;
+}
+
+.table td {
+    color: #43564a;
+}
+
+/* Status Labels */
+.status-label {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-recycled {
+    background-color: #d9f3e2;
+    color: #176b45;
+}
+
+.status-pending {
+    background-color: #fff0d5;
+    color: #8b5b08;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #b02a37;
+}
+
+/* Empty Message */
+.empty-message {
+    color: #65736a;
+    text-align: center;
+    padding: 20px 0 5px;
+}
+
+/* Add Button */
+.add-btn {
+    background-color: #176b45;
+    color: white;
+    padding: 11px 22px;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background-color: #105536;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #124b33;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .heading-section h1 {
+        font-size: 27px;
+    }
+
+    .table-card {
+        padding: 15px;
+    }
+
+    .history-section {
+        padding-top: 25px;
+    }
+}

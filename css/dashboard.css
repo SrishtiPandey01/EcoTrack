@@ -1,0 +1,257 @@
+
+/* General Page Styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f8f5;
+    font-family: Arial, sans-serif;
+    color: #26382d;
+}
+
+/* Navbar */
+.eco-navbar {
+    background-color: #176b45;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    color: white;
+}
+
+.logout-btn {
+    background-color: white;
+    color: #176b45;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 8px 20px;
+}
+
+.logout-btn:hover {
+    background-color: #e5f4e9;
+    color: #125437;
+}
+
+/* Main Section */
+.dashboard-section {
+    flex: 1;
+    padding: 35px 0;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.welcome-section h1 {
+    color: #176b45;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    color: #65736a;
+    margin-bottom: 0;
+}
+
+.date-text {
+    background-color: white;
+    border: 1px solid #dce8df;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0;
+    color: #176b45;
+    font-weight: bold;
+}
+
+/* Statistics Cards */
+.stat-card {
+    height: 100%;
+    padding: 25px;
+    border-radius: 14px;
+    background-color: white;
+    border: 1px solid #e1e9e3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.09);
+}
+
+.stat-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.stat-card h5 {
+    font-size: 17px;
+    color: #53645a;
+    margin-bottom: 12px;
+}
+
+.stat-card h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #176b45;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    color: #7b877f;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.total-card {
+    border-top: 4px solid #27865b;
+}
+
+.recycled-card {
+    border-top: 4px solid #39a96b;
+}
+
+.pending-card {
+    border-top: 4px solid #e5a23d;
+}
+
+/* Quick Actions */
+.actions-section {
+    margin-top: 40px;
+}
+
+.actions-section h2 {
+    color: #176b45;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.section-description {
+    color: #65736a;
+    margin-bottom: 22px;
+}
+
+.action-card {
+    background-color: white;
+    height: 100%;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e1e9e3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.action-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.action-card h4 {
+    color: #176b45;
+    font-weight: bold;
+}
+
+.action-card p {
+    color: #65736a;
+    line-height: 1.6;
+    margin: 12px 0 20px;
+}
+
+/* Buttons */
+.primary-btn {
+    background-color: #176b45;
+    color: white;
+    padding: 10px 22px;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background-color: #105536;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #176b45;
+    border: 1px solid #176b45;
+    padding: 10px 22px;
+    font-weight: bold;
+}
+
+.secondary-btn:hover {
+    background-color: #176b45;
+    color: white;
+}
+
+/* Eco Message */
+.eco-message {
+    margin-top: 35px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #e4f3e8;
+    border-left: 5px solid #27865b;
+}
+
+.eco-message h4 {
+    color: #176b45;
+    font-weight: bold;
+}
+
+.eco-message p {
+    color: #4f6657;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 18px 12px;
+    background-color: #124b33;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile Screen */
+@media (max-width: 576px) {
+    .dashboard-section {
+        padding: 25px 0;
+    }
+
+    .welcome-section h1 {
+        font-size: 27px;
+    }
+
+    .date-text {
+        font-size: 14px;
+    }
+
+    .stat-card,
+    .action-card {
+        padding: 22px;
+    }
+
+    .actions-section h2 {
+        font-size: 23px;
+    }
+}

@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Waste | EcoTrack</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/add_waste.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark eco-navbar">
+        <div class="container">
+            <a href="dashboard.html" class="navbar-brand fw-bold">
+                🌿 EcoTrack
+            </a>
+
+            <a href="dashboard.html" class="btn back-btn">
+                Back to Dashboard
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container page-section">
+
+        <div class="page-heading">
+            <h1>Add Waste Details</h1>
+            <p>Record your waste and help keep the environment clean.</p>
+        </div>
+
+        <div class="form-card">
+
+            <form onsubmit="return saveWaste()">
+
+                <!-- Waste Type -->
+                <div class="mb-3">
+                    <label for="wasteType" class="form-label">
+                        Waste Type
+                    </label>
+
+                    <select id="wasteType" class="form-select">
+                        <option value="">Select waste type</option>
+                        <option value="Plastic">Plastic</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Food">Food Waste</option>
+                        <option value="Glass">Glass</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Electronic">Electronic Waste</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <small id="typeError" class="error"></small>
+                </div>
+
+                <!-- Quantity -->
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">
+                        Quantity (in kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        class="form-control"
+                        placeholder="Enter quantity"
+                        min="0.1"
+                        step="0.1">
+
+                    <small id="quantityError" class="error"></small>
+                </div>
+
+                <!-- Date -->
+                <div class="mb-3">
+                    <label for="wasteDate" class="form-label">
+                        Waste Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="wasteDate"
+                        class="form-control">
+
+                    <small id="dateError" class="error"></small>
+                </div>
+
+                <!-- Recycling Status -->
+                <div class="mb-3">
+                    <label for="status" class="form-label">
+                        Recycling Status
+                    </label>
+
+                    <select id="status" class="form-select">
+                        <option value="">Select status</option>
+                        <option value="Recycled">Recycled</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+
+                    <small id="statusError" class="error"></small>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label for="description" class="form-label">
+                        Description (Optional)
+                    </label>
+
+                    <textarea
+                        id="description"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Enter additional details"></textarea>
+                </div>
+
+                <button type="submit" class="btn save-btn w-100">
+                    Save Waste Details
+                </button>
+
+                <p id="successMessage" class="success-message"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EcoTrack | Building a Greener Future 🌍</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/addWaste.js"></script>
+
+</body>
+</html>
